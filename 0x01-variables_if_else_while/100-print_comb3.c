@@ -11,26 +11,23 @@ int main(void)
 
 	while (d < 10)
 	{
-		c = 10
+		c = 10;
 		while (c < 10)
 		{
 			putchar('0' + d);
 			putchar('0' + c);
-
 			if (c + d != 17)
 			{
 				putchar(',');
 				putchar(' ');
+				}
 			}
+
 		}
-
-	}
 	c++;
-}
-d++;
-
-}
-putchar('\n');
+	}
+	d++;
+	}
+	putchar('\n');
 return (0);
-
-}
+{
