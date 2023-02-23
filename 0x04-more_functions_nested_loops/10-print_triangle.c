@@ -1,14 +1,18 @@
 #include "main.h"
 
 /**
- * print_triangle - Prints a triangle of squares according parameter
- * @size: The size of the squares triangle
- * Return: empty
+ * print_triangle - prints a triangle, followed by a new line.
+ * @size: the size of the triangle
+ *
+ * Return:
  */
 
 void print_triangle(int size)
 {
-	int m, n, o;
+
+	int i;
+	int j;
+	int k;
 
 	if (size <= 0)
 	{
@@ -16,17 +20,22 @@ void print_triangle(int size)
 	}
 	else
 	{
-	for (m = 0; m < size; x++)
+	for (i = 0; i < size; i++)
 	{
-	for (n = size - m; n > 1; n--)
+	j = size - 1;
+	while (j > i)
 	{
-	_putchar(32);
+	_putchar(' ');
+	j--;
 	}
-	for (o = 0; o <= m; o++)
+	k = 0;
+	while (k < i + 1)
 	{
-	_putchar(35);
+	_putchar('#');
+	k++;
 	}
 	_putchar('\n');
 	}
 	}
+	return;
 }
