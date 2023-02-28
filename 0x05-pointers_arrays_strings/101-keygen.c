@@ -3,42 +3,33 @@
 #include <time.h>
 
 /**
- * main - Generates random valid passwords for the
- * program 101-crackme.
- * Return: Always 0.
+ * main - program that generates random valid
+ * passwords for the program 101-crackme
+ *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	char password[84];
-	int index = 0, sum = 0, diff_half1, diff_half2;
+		int key[100];
+		int i;
+		int sum;
+		int n;
 
-	srand(time(0));
-
-	while (sum < 2772)
-	{
-	password[index] = '\0';
-	if (sum != 2772)
-	{
-	diff_half1 = (sum - 2772) / 2;
-	diff_half2 = (sum - 2772) / 2;
-	if ((sum - 2772) % 2 != 0)
-	diff_half1++;
-	for (index = 0; password[index]; index++)
-	{
-	if (password[index] >= (33 + diff_half1))
-	{
-	password[index] -= diff_half1;
-	break;
-	}
-	}
-	for (index = 0; password[index]; index++)
-	{
-	if (password[index] -= diff_half2)
-	break;
-	}
-	}
-	}
-	printf("%s", password);
-	return (0);
+		sum = 0;
+		srand(time(NULL));
+		for (i = 0; i < 100; i++)
+		{
+		key[i] = rand() % 78;
+		sum += (key[i] + '0');
+		putchar(key[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+		n = 2772 - sum - '0';
+		sum += n;
+		putchar(n + '0');
+		break;
+		}
+		}
+		return (0);
 }
