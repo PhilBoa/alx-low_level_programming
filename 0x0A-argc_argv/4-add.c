@@ -8,6 +8,7 @@
  *
  * Return: the int converted from the string
  */
+
 int _atoi(char *s)
 {
 	int i, d, n, lengthh, f, number;
@@ -46,6 +47,7 @@ int _atoi(char *s)
 	else
 		return (n);
 }
+
 /**
  * main - Entry point
  * Description: Adds positive numbers.
@@ -53,6 +55,7 @@ int _atoi(char *s)
  * @argv: - array of strings
  *Return: 0 Always (Success)
  */
+
 int main(int argc, char *argv[])
 {
 	unsigned int result;
