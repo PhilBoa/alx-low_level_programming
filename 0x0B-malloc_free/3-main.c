@@ -10,6 +10,7 @@
  *
  * Return: Nothing.
  */
+
 void print_grid(int **grid, int width, int height)
 {
     int w;
@@ -34,6 +35,7 @@ void print_grid(int **grid, int width, int height)
  *
  * Return: Always 0.
  */
+
 int main(void)
 {
     int **grid;
