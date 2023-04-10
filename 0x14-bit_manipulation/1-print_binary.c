@@ -1,16 +1,26 @@
 #include "main.h"
 
 /**
- * print_binary - prints the binary representation of a number.
- * @n: nunber to be converted
- * Return: binary representation of the number.
+ * print_binary - prints binary equivalent of a decimal number
+ * @n: number to print in binary
  */
 
 void print_binary(unsigned long int n)
 {
-	/*If num is greater than 1, continue the recursion*/
-	if (n > 1)
-	print_binary(n / 2);
-	/*Print the least significant bit of num in binary form */
-	_putchar(n % 2 + '0');
+	int k, counter = 0;
+	unsigned long int current;
+
+	for (k = 63; k >= 0; k--)
+	{
+	current = n >> k;
+	if (current & 1)
+	{
+	_putchar('1');
+	counter++;
+	}
+	else if (counter)
+	_putchar('0');
+	}
+	if (!counter)
+	_putchar('0');
 }
