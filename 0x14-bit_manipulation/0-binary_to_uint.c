@@ -9,18 +9,18 @@
  * b is NULL
  */
 
-unsigned int binary_to_uint(const char *b)
+unsigned int binary_to_uint(const char *bin)
 {
-	int i;
+	int k;
 	unsigned int result = 0;
 
-	if (b == NULL)
+	if (bin == NULL)
 	return (0);
-	for (i = 0; b[i] != '\0'; i++)
+	for (k = 0; bin[k] != '\0'; k++)
 	{
-	if (b[i] == '0' || b[i] == '1')
+	if (bin[k] == '0' || bin[k] == '1')
 	{
-	result = (result << 1) + (b[i] - '0');
+	result = (result << 1) + (bin[k] - '0');
 	}
 	else
 	{
