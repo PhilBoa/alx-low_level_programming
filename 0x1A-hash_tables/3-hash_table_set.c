@@ -1,4 +1,5 @@
 #include"hash_tables.h"
+
 /**
  * hash_table_set - function that add elements into the hash table
  * @ht: the hash table to add or update the key/value to
@@ -7,6 +8,7 @@
  *
  * Return: 1 if it succeeded, 0 otherwise
  */
+
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx;
