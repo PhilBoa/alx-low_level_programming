@@ -1,0 +1,13 @@
+# Makefile for building the 'school' executable file
+
+all: school
+
+CC = gcc
+CFLAGS =
+
+SOURCE_FILES = main.c school.c
+
+OBJECT_FILES = $(SOURCE_FILES:.c=.o)
+
+school: $(OBJECT_FILES)
+	$(CC) $(CFLAGS) -o school $(OBJECT_FILES)
