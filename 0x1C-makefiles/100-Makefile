@@ -1,0 +1,29 @@
+# Makefile for building the 'school' executable file
+
+CC = gcc
+
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+SRC = main.c file1.c file2.c
+
+OBJ = $(SRC:.c=.o)
+
+NAME = school
+
+RM = rm -f
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+
+clean:
+	$(RM) $(NAME) *~ #*\#
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: fclean all
+
